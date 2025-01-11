@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bludd Culture - Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo Section -->
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="Bludd Culture Logo" class="logo-img"> <!-- Replace with your logo image -->
+        </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="latest-news.html">Latest News</a>
+        <a href="events.html">Events</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Checkout Section -->
+    <div class="checkout-section">
+        <h1>Checkout</h1>
+        <form action="#" method="POST">
+            <!-- Product Selection -->
+            <div class="form-group">
+                <label for="product-selection">Choose Your Product</label>
+                <select id="product-selection" name="product-selection" required>
+                    <option value="">Select a product</option>
+                    <option value="BLUDD VERS 1 BLACK">BLUDD VERS 1 BLACK - RM79.00</option>
+                    <option value="BLUDD VERS 1 WHITE">BLUDD VERS 1 WHITE - RM79.00</option>
+                    <option value="BLUDD VERS 2 BLACK">BLUDD VERS 2 BLACK - RM79.00</option>
+                    <option value="BLUDD VERS 2 WHITE">BLUDD VERS 2 WHITE - RM79.00</option>
+                    <option value="BLUDD VERS 3 BLACK">BLUDD VERS 3 BLACK - RM79.00</option>
+                    <option value="BLUDD VERS 3 WHITE">BLUDD VERS 3 WHITE - RM79.00</option>
+                    <option value="BLUDD VERS 4 BLACK">BLUDD VERS 4 BLACK - RM79.00</option>
+                    <option value="BLUDD VERS 5 BLACK">BLUDD VERS 5 BLACK - RM79.00</option>
+                </select>
+            </div>
+
+            <!-- Quantity Selection -->
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required onchange="updateAmount()">
+            </div>
+
+            <!-- Total Amount -->
+            <div class="form-group">
+                <label for="total-amount">Total Amount</label>
+                <input type="text" id="total-amount" name="total-amount" value="RM79.00" readonly>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="form-group">
+                <label for="size-selection">Choose Your Size</label>
+                <select id="size-selection" name="size-selection" required>
+                    <option value="">Select Size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="2XL">2XL</option>
+                    <option value="3XL">3XL</option>
+                </select>
+            </div>
+
+            <!-- Personal Details -->
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Payment Button -->
+            <div class="form-group">
+                <button type="submit">Proceed to Payment</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Bludd Culture. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        // Function to update the total amount based on the quantity selected
+        function updateAmount() {
+            const price = 79.00; // Price per item
+            const quantity = document.getElementById("quantity").value; // Get selected quantity
+            const totalAmount = price * quantity; // Calculate total amount
+            document.getElementById("total-amount").value = "RM" + totalAmount.toFixed(2); // Update total amount field
+        }
+    </script>
+</body>
+</html>
