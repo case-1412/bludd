@@ -91,6 +91,59 @@
         </form>
     </div>
 
+    <!-- Size Chart Section -->
+    <div class="size-chart-section">
+        <h2>Size Chart</h2>
+        <table class="size-chart">
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th>Chest (in cm)</th>
+                    <th>Length (in cm)</th>
+                    <th>Width (in cm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S</td>
+                    <td>90</td>
+                    <td>65</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>95</td>
+                    <td>67</td>
+                    <td>47</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>100</td>
+                    <td>70</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>105</td>
+                    <td>72</td>
+                    <td>52</td>
+                </tr>
+                <tr>
+                    <td>2XL</td>
+                    <td>110</td>
+                    <td>74</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>3XL</td>
+                    <td>115</td>
+                    <td>76</td>
+                    <td>57</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <!-- Footer -->
     <div class="footer">
         <p>&copy; 2024 Bludd Culture. All Rights Reserved.</p>
@@ -105,5 +158,26 @@
             document.getElementById("total-amount").value = "RM" + totalAmount.toFixed(2); // Update total amount field
         }
     </script>
+
+    <!-- Add some styling to the table -->
+    <style>
+        .size-chart-section {
+            margin-top: 30px;
+            padding: 10px;
+        }
+        .size-chart {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .size-chart th, .size-chart td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .size-chart th {
+            background-color: #f4f4f4;
+        }
+    </style>
 </body>
 </html>
